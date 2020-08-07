@@ -7,68 +7,69 @@ export default class CreateExercise extends Component {
   constructor(props) {
     super(props);
 
-    this.onChangeUsername = this.onChangeUsername.bind(this);
-    this.onChangeCategory = this.onChangeCategory.bind(this);
-    this.onChangeAmount = this.onChangeAmount.bind(this);
-    this.onChangeDescription = this.onChangeDescription.bind(this);
-    this.onChangeRate = this.onChangeRate.bind(this);
+    this.onChangeSales = this.onChangeSales.bind(this);
+    this.onChangeEcomm = this.onChangeEcomm.bind(this);
+    this.onChangeSocial = this.onChangeSocial.bind(this);
+    this.onChangeAds = this.onChangeAds.bind(this);
+    this.onChangeOther = this.onChangeOther.bind(this);
+
     this.onChangeDate = this.onChangeDate.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      username: '',
-      category: '',
-      amount: 0,
-      description: '',
-      rate: 0,
-      date: new Date(),
-      users: []
+      sales: 0,
+      ecomm: 0,
+      social: 0,
+      ads: 0,
+      other: 0,
+      date: new Date()
+      //users: []
     }
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/users/')
-      .then(response => {
-        if (response.data.length > 0) {
-          this.setState({
-            users: response.data.map(user => user.username),
-            username: response.data[0].username
-          })
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      })
+    // axios.get('http://localhost:5000/users/')
+    //   .then(response => {
+    //     if (response.data.length > 0) {
+    //       this.setState({
+    //         users: response.data.map(user => user.username),
+    //         username: response.data[0].username
+    //       })
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   })
 
   }
 
-  onChangeUsername(e) {
+  onChangeSales(e) {
     this.setState({
-      username: e.target.value
+      sales: e.target.value
     })
   }
 
-  onChangeCategory(e) {
+  onChangeEcomm(e) {
     this.setState({
-      category: e.target.value
+      ecomm: e.target.value
     })
   }
 
-  onChangeAmount(e) {
+  onChangeSocial(e) {
     this.setState({
-      amount: e.target.value
+      social: e.target.value
     })
   }
 
-  onChangeDescription(e) {
+  onChangeAds(e) {
     this.setState({
-      description: e.target.value
+      ads: e.target.value
     })
   }
 
-  onChangeRate(e) {
+  onChangeOther(e) {
     this.setState({
-      rate: e.target.value
+      other: e.target.value
     })
   }
 
@@ -82,11 +83,11 @@ export default class CreateExercise extends Component {
     e.preventDefault();
 
     const week = {
-      username: this.state.username,
-      category: this.state.category,
-      amount: this.state.amount,
-      description: this.state.description,
-      rate: this.state.rate,
+      sales: this.state.sales,
+      ecomm: this.state.ecomm,
+      social: this.state.social,
+      ads: this.state.ads,
+      other: this.state.other,
       date: this.state.date
     }
 
@@ -101,9 +102,9 @@ export default class CreateExercise extends Component {
   render() {
     return (
     <div>
-      <h3>Create New Exercise Log</h3>
+      <h3>Create New Week Log</h3>
       <form onSubmit={this.onSubmit}>
-        <div className="form-group"> 
+        {/* <div className="form-group"> 
           <label>Username: </label>
           <select ref="userInput"
               required
@@ -119,45 +120,56 @@ export default class CreateExercise extends Component {
                 })
               }
           </select>
-        </div>
+        </div> */}
+
         <div className="form-group"> 
-          <label>Category: </label>
+          <label>Net Sales: </label>
           <input  type="text"
               required
               className="form-control"
-              value={this.state.category}
-              onChange={this.onChangeCategory}
+              value={this.state.sales}
+              onChange={this.onChangeSales}
               />
         </div>
 
         <div className="form-group"> 
-          <label>Amount: </label>
-          <input  type="text"
+          <label>eComm: </label>
+            <div class="slidecontainer">
+                <input type="range" required min="0" max="5" value="0" class="slider" 
+                        id="myRange" value={this.state.ecomm} onChange={this.onChangeEcomm}/>
+            </div>
+          {/* <input type="text"
               required
               className="form-control"
-              value={this.state.amount}
-              onChange={this.onChangeAmount}
-              />
+              value={this.state.ecomm}
+              onChange={this.onChangeEcomm}
+              /> */}
         </div>
 
         <div className="form-group"> 
-          <label>Description: </label>
-          <input  type="text"
-              required
-              className="form-control"
-              value={this.state.description}
-              onChange={this.onChangeDescription}
-              />
+          <label>Social Media: </label>
+            <div class="slidecontainer">
+                <input type="range" required min="0" max="5" value="0" class="slider" 
+                        id="myRange" value={this.state.social} onChange={this.onChangeSocial}/>
+            </div>
         </div>
-        <div className="form-group">
-          <label>Rate (1-5): </label>
-          <input 
-              type="text" 
-              className="form-control"
-              value={this.state.rate}
-              onChange={this.onChangeRate}
-              />
+
+        <div className="form-group"> 
+          <label>Ads: </label>
+            <div class="slidecontainer">
+                <input type="range" required min="0" max="5" value="0" class="slider" 
+                        id="myRange" value={this.state.ads} onChange={this.onChangeAds}/>
+            </div>
         </div>
+
+        <div className="form-group"> 
+          <label>Other: </label>
+            <div class="slidecontainer">
+                <input type="range" required min="0" max="5" value="0" class="slider" 
+                        id="myRange" value={this.state.other} onChange={this.onChangeOther}/>
+            </div>
+        </div>
+
         <div className="form-group">
           <label>Date: </label>
           <div>

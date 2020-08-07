@@ -17,7 +17,7 @@ function Week() {
       <Route path="/" exact component={WeeksList} />
       <Route path="/edit/:id" component={EditWeek} />
       <Route path="/create" component={CreateWeek} />
-      <Route path="/user" component={CreateUser} />
+      {/* <Route path="/user" component={CreateUser} /> */}
       </div>
     </Router>
   );
