@@ -9,7 +9,7 @@ export default class Home extends Component {
       <container-fluid id="home">
        
         <div class="topnav">
-          <a href="#home">Log In</a>
+          <a href="/src/components/login-page/login.jsx">Log In</a>
           <a href="#contact">Contact</a>
           <a href="#about">About</a>
         </div>
