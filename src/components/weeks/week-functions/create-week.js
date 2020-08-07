@@ -3,7 +3,7 @@ import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
-export default class CreateExercise extends Component {
+export default class CreateWeek extends Component {
   constructor(props) {
     super(props);
 
@@ -42,6 +42,12 @@ export default class CreateExercise extends Component {
     //   })
 
   }
+
+  // onChangeUsername(e) {
+  //   this.setState({
+  //     username: e.target.value
+  //   })
+  // }
 
   onChangeSales(e) {
     this.setState({

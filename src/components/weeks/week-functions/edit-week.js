@@ -3,7 +3,7 @@ import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
-export default class EditExercise extends Component {
+export default class EditWeek extends Component {
   constructor(props) {
     super(props);
 
@@ -17,7 +17,7 @@ export default class EditExercise extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-        sales: this.sales,
+        sales: 0,
         ecomm: 0,
         social: 0,
         ads: 0,
@@ -31,6 +31,7 @@ export default class EditExercise extends Component {
     axios.get('http://localhost:5000/weeks/'+this.props.match.params.id)
       .then(response => {
         this.setState({
+          // username: response.data.username,
           sales: response.data.sales,
           ecomm: response.data.ecomm,
           social: response.data.social,
@@ -56,6 +57,12 @@ export default class EditExercise extends Component {
     //   })
 
   }
+
+  // onChangeUsername(e) {
+  //   this.setState({
+  //     username: e.target.value
+  //   })
+  // }
 
   onChangeSales(e) {
     this.setState({
@@ -97,14 +104,14 @@ export default class EditExercise extends Component {
     e.preventDefault();
 
     const week = {
-        sales: this.state.sales,
-        ecomm: this.state.ecomm,
-        social: this.state.social,
-        ads: this.state.ads,
-        other: this.state.other,
-        date: this.state.date
-      }
-  
+      sales: this.state.sales,
+      ecomm: this.state.ecomm,
+      social: this.state.social,
+      ads: this.state.ads,
+      other: this.state.other,
+      date: this.state.date
+    }
+
     console.log(week);
 
     axios.post('http://localhost:5000/weeks/update/' + this.props.match.params.id, week)
@@ -115,7 +122,7 @@ export default class EditExercise extends Component {
 
   render() {
     return (
-        <div>
+     <div>
         <h3>Edit Week Log</h3>
         <form onSubmit={this.onSubmit}>
           {/* <div className="form-group"> 
@@ -195,7 +202,7 @@ export default class EditExercise extends Component {
           </div>
   
           <div className="form-group">
-            <input type="submit" value="Create Week" className="btn btn-primary" />
+            <input type="submit" value="Edit Week" className="btn btn-primary" />
           </div>
         </form>
       </div>

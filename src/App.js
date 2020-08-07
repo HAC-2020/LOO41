@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Week from "./components/weeks/week.jsx";
+import Week from "./components/weeks/week";
 import Home from "./components/home-folder/home.jsx";
 
 function App() {
