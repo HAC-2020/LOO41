@@ -71,7 +71,6 @@ if (!endpointHostName.includes('/v5.0') && !endpointHostName.endsWith('/qnamaker
     endpointHostName = endpointHostName + '/qnamaker';
 }
 
-
 // Create the main dialog.
 const dialog = new RootDialog(process.env.QnAKnowledgebaseId, process.env.QnAAuthKey, endpointHostName);
 
