@@ -4,9 +4,11 @@ import axios from 'axios';
 
 const Week = props => (
   <tr>
-    <td>{props.week.username}</td>
-    <td>{props.week.description}</td>
-    <td>{props.week.duration}</td>
+    <td>{props.week.sales}</td>
+    <td>{props.week.ecomm}</td>
+    <td>{props.week.social}</td>
+    <td>{props.week.ads}</td>
+    <td>{props.week.other}</td>
     <td>{props.week.date.substring(0,10)}</td>
     <td>
       <Link to={"/edit/"+props.week._id}>edit</Link> | <a href="#" onClick={() => { props.deleteWeek(props.week._id) }}>delete</a>
@@ -55,11 +57,11 @@ export default class WeeksList extends Component {
         <table className="table">
           <thead className="thead-light">
             <tr>
-              <th>Username</th>
-              <th>Category</th>
-              <th>Amount</th>
-              <th>Description</th>
-              <th>Rate</th>
+              <th>Sales</th>
+              <th>Ecomm</th>
+              <th>Social Media</th>
+              <th>Ads</th>
+              <th>Other</th>
               <th>Date</th>
               <th>Actions</th>
             </tr>

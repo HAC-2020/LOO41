@@ -8,20 +8,20 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/add').post((req, res) => {
-  const username = req.body.username;
-  const category = req.body.category;
-  const amount = Number(req.body.amount);
-  const description = req.body.description;
-  const rate = Number(req.body.rate);
+  const sales = Number(req.body.sales);
+  const ecomm = Number(req.body.ecomm);
+  const social = Number(req.body.social);
+  const ads = Number(req.body.ads);
+  const other = Number(req.body.other);
   const date = Date.parse(req.body.date);
 
   const newWeek = new Week({
-    username,
-    category,
-    amount,
-    description,
-    rate,
-    date,
+    sales,
+    ecomm,
+    social,
+    ads,
+    other,
+    date
   });
 
   newWeek.save()
@@ -44,11 +44,11 @@ router.route('/:id').delete((req, res) => {
 router.route('/update/:id').post((req, res) => {
     newWeek.findById(req.params.id)
     .then(week => {
-        const username = req.body.username;
-        const category = req.body.category;
-        const amount = Number(req.body.amount);
-        const description = req.body.description;
-        const rate = Number(req.body.rate);
+        const sales = Number(req.body.sales);
+        const ecomm = Number(req.body.ecomm);
+        const social = Number(req.body.social);
+        const ads = Number(req.body.ads);
+        const other = Number(req.body.other);
         const date = Date.parse(req.body.date);
 
       week.save()
