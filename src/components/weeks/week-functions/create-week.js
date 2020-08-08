@@ -108,7 +108,9 @@ export default class CreateWeek extends Component {
   render() {
     return (
     <div>
-      <h3>Create New Week Log</h3>
+      <h3>Create New Log</h3>
+      <h5>Please list your net sales, and rank your engagement across the listed platforms.</h5>
+      <h6>The scale, from left to right, goes from complete inactivity to high engagement and confidence.</h6>
       <form onSubmit={this.onSubmit}>
         {/* <div className="form-group"> 
           <label>Username: </label>

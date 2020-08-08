@@ -4,8 +4,6 @@ import axios from 'axios';
 import { Line } from "react-chartjs-2";
 
 
-
-
 export default class MainGraph extends Component {
   constructor(props) {
     super(props);
@@ -46,12 +44,11 @@ export default class MainGraph extends Component {
     console.log(this.dates);
     console.log(this.sales);
 
-
     const data = {
         labels: this.dates,
         datasets: [
           {
-            label: "First dataset",
+            label: "Net sales",
             data: this.sales,
             fill: true,
             backgroundColor: "rgba(75,192,192,0.2)",
@@ -62,8 +59,10 @@ export default class MainGraph extends Component {
     //console.log(this.sales);
     return (
       <div>
+        <h3>Welcome, </h3>
+        <h2>COMPANY: X</h2>
         <Line data={data} />
-        <h3>testing</h3>
+        <h5>Notice: COVID notice goes here</h5>
       </div>
     )
   }

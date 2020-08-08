@@ -3,13 +3,17 @@ import React, { Component } from "react";
 import Button from 'react-bootstrap/Button';
 import Col from "react-bootstrap/Col";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import LoginButton from './login';
+import LogoutButton from './logout';
 
 export default class Home extends Component {
   render() {
     return (
       <container-fluid id="home">
-        <div className="topnav">
-          <a href="#home">Log In</a>
+       
+        <div class="topnav">
+          <LoginButton></LoginButton>
+          <LogoutButton></LogoutButton>
           <a href="#contact">Contact</a>
           <a href="#about">About</a>
         </div>

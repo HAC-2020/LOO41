@@ -11,8 +11,8 @@ const Week = props => (
     <td>{props.week.other}</td>
     <td>{props.week.date.substring(0,10)}</td>
     <td>
-      <Link to={"/edit/"+props.week._id}>edit</Link> | <a href="#" onClick={() => { props.deleteWeek(props.week._id) }}>delete</a> |
-      <Link to={"/view/"+props.week._id}>view</Link>
+      <Link to={"/edit/"+props.week._id}>edit</Link> | <a href="#" onClick={() => { props.deleteWeek(props.week._id) }}>delete</a> | 
+       <Link to={"/view/"+props.week._id}> view</Link>
     </td>
   </tr>
 )
@@ -55,6 +55,7 @@ export default class WeeksList extends Component {
     return (
       <div>
         <h3>Logged Weeks</h3>
+        <h5>To view your digitalization progress in more detail, click the view tab.</h5>
         <table className="table">
           <thead className="thead-light">
             <tr>
