@@ -7,10 +7,10 @@ export default class About2 extends Component {
     render() {
         return (
             <container-fluid>
-
+                <div className="about2-chunk">
                     <Col className="about-quote"> 
                         <div>
-                            <h1>Digitally mature companies are 23% more profitable than their less mature peers.</h1> 
+                            <h1>89% of all companies have already adopted a digital-first business strategy or plan to do so. </h1> 
                         </div>
                     </Col>
 
@@ -20,14 +20,12 @@ export default class About2 extends Component {
                         </div>
                     </Col>
 
-                    <Col className="graph-image">
+                    {/*<Col className="graph-image">
                         <div>
                             <img src="./images/pie-chart.png" alt="charts graphic"/>
-                          {/*Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>*/}
-                        </div>
-                                        
-                    </Col>
-    
+                          {/*Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                        </div> </Col> */}
+                </div>
             </container-fluid>
         )
     }

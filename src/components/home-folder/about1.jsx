@@ -8,24 +8,29 @@ export default class About1 extends Component {
     render() {
         return (
             <container-fluid>
-                
-                    <Col className="about-title"> 
-                        <div>
-                            <h1><em>What we do</em></h1> 
-                        </div>
+            <div className="about1-chunk">
+                <div className="about-title">
+                    <Col > 
+                            <h1>What we do</h1> 
                     </Col>
+                </div>
 
-                    <Col className="about1-text">
-                        <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                    </Col>
+                <div className="about1-text">
+                    <Row>
+                        <Col md={4}>
+                                <p>Track your business data and display growth patterns in a beautiful, organized interface</p>
+                        </Col>
 
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    {/*however much space content takes up*/}
+                        <Col md={4}>
+                            <p>Provide you with valuable tips to help grow your business based on performance trends</p>
+                        </Col>
 
+                        <Col md={4}>
+                            <p>Something else that sounds cool to allow you to access our collection of resources and advice whenever you want.</p>
+                        </Col>
+                    </Row>
+                </div>
+            </div>
             </container-fluid>
         )
     }

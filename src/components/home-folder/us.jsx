@@ -10,7 +10,7 @@ export default class Us extends Component {
 
                     <Col className="us-title"> 
                         <div>
-                            <h1><em>About us</em></h1> 
+                            <h1>About us</h1> 
                         </div>
                     </Col>
 
