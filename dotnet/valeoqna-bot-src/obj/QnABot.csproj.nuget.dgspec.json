@@ -1,0 +1,80 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/savanmalhotra/Sites/Github/LOO41/dotnet/valeoqna-bot-src/QnABot.csproj": {}
+  },
+  "projects": {
+    "/Users/savanmalhotra/Sites/Github/LOO41/dotnet/valeoqna-bot-src/QnABot.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/savanmalhotra/Sites/Github/LOO41/dotnet/valeoqna-bot-src/QnABot.csproj",
+        "projectName": "QnABot",
+        "projectPath": "/Users/savanmalhotra/Sites/Github/LOO41/dotnet/valeoqna-bot-src/QnABot.csproj",
+        "packagesPath": "/Users/savanmalhotra/.nuget/packages/",
+        "outputPath": "/Users/savanmalhotra/Sites/Github/LOO41/dotnet/valeoqna-bot-src/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/savanmalhotra/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "target": "Package",
+              "version": "[2.1.19, )"
+            },
+            "Microsoft.Bot.Builder.AI.QnA": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            },
+            "Microsoft.Bot.Builder.Dialogs": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            },
+            "Microsoft.Bot.Builder.Integration.AspNet.Core": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
