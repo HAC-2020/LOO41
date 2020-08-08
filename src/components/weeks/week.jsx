@@ -15,11 +15,11 @@ function Week() {
       <div className="container">
       <Navbar />
       <br/>
-      <Route path="/" exact component={WeeksList} />
+      <Route path="/" exact component={MainGraph} />
       <Route path="/edit/:id" component={EditWeek} />
       <Route path="/create" component={CreateWeek} />
       <Route path="/view/:id" component={ViewWeek} />
-      <Route path="/graph" component={MainGraph} />
+      <Route path="/list" component={WeeksList} />
       {/* <Route path="/user" component={CreateUser} /> */}
       </div>        
     </Router>
