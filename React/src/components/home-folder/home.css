@@ -3,9 +3,9 @@ html{
   height: auto;
 }
 
-div {
+/*div {
     height: 300px;
-}
+}*/
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -22,6 +22,7 @@ div {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-family: 'Work Sans', sans-serif;
   }
   
   /* Change the color of links on hover */
@@ -37,7 +38,6 @@ div {
   }
 
   body {
-    height: 220%;
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to bottom, rgb(32, 38, 54), rgb(11, 16, 27));
@@ -56,18 +56,30 @@ div {
     font-size: 300%;
     color: floralwhite;
     padding: 2%;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  .leaves {
+    position: absolute;
+    left: 750px;
+    top: -40px;
+    width: 100px;
+    margin: 15px;
+    height: 100px;
   }
 
   .home-text {
     color: floralwhite;
     position: absolute;
-    line-height: 4.0;
+    line-height: 100px;
     right: 7%;
     top: 50%;
     width: 40%;
     padding: 2%;
     text-align: center;
     display: inline-flex;
+    font-size: large;
+    font-family: 'Lato', sans-serif;
   }
 
   .start-button {
@@ -76,6 +88,7 @@ div {
     right: 10%;
     height: 300px;
     padding: 12%;
+    font-family: 'Work Sans', sans-serif;
 
   }
   .about1-chunk {
@@ -88,15 +101,48 @@ div {
     display: block;
     top: 675px;
     margin-left: 1%;
+    margin-bottom: 5%;
     height: 300px;
+    font-size: larger;
+    font-family: 'Work Sans', sans-serif;
   }
 
+  .about1-images {
+    display: flexbox;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    top: 800px;
+    padding: 4%;
+    align-items: center;
+  }
+
+  .light-bulb {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+  }
+
+  .combo {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+  }
+
+  .bot {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+  }
+  
   .about1-text {
     color: floralwhite;
     padding: 4%;
     top: 1000px;
     flex-wrap: wrap;
     position: absolute;
+    font-size: large;
+    font-family: 'Lato', sans-serif;
   }
 
   .about2-chunk {
@@ -109,6 +155,16 @@ div {
     position: absolute;
     top: 1250px;
     margin-left: 1%;
+    font-size: larger;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  .forbes {
+    color: floralwhite;
+    position: absolute;
+    top: 1360px;
+    margin-left: 1%;
+    font-family: 'Work Sans', sans-serif;
   }
 
   .about2-text {
@@ -118,10 +174,26 @@ div {
     margin-top: 15px;
     padding: 4%;
     line-height: 25px;
+    font-size: large;
+    font-family: 'Lato', sans-serif;
   }
 
+  .digital {
+    width: 300px;
+    height: 300px;
+  }
+
+  .about2-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
   .us-title {
     color: floralwhite;
     position: absolute;
     top: 1750px;
+    font-size: larger;
+    margin-left: 1%;
+    font-family: 'Work Sans', sans-serif;
   }

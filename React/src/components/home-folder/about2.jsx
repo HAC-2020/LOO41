@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import Row from "react-bootstrap/Row";
+import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 //import FadeInSection from "../FadeInSection";
 
@@ -14,17 +14,25 @@ export default class About2 extends Component {
                         </div>
                     </Col>
 
+                    <Col className="forbes">
+                        <h5>(Forbes Magazine)</h5>
+                    </Col>
+
+                <Row className="about2-row">
                     <Col className="about2-text" md={7}>
                         <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Something about digitalization! Super important to help your business *thrive* :)</p>
                         </div>
                     </Col>
 
-                    {/*<Col className="graph-image">
-                        <div>
-                            <img src="./images/pie-chart.png" alt="charts graphic"/>
-                          {/*Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-                        </div> </Col> */}
+                    <div className="about2-images">
+                    <Col>
+                        <div> 
+                            <img src={require("./images/digital-marketing.png")} alt="digitalization" className="digital"/> 
+                        </div> 
+                    </Col>
+                    </div>
+                </Row>
                 </div>
             </container-fluid>
         )
