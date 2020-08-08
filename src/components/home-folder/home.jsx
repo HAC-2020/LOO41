@@ -2,6 +2,8 @@ import React, { Component } from "react";
 //import "./home.css"; 
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import LoginButton from './login';
+import LogoutButton from './logout';
 
 export default class Home extends Component {
   render() {
@@ -9,7 +11,8 @@ export default class Home extends Component {
       <container-fluid id="home">
        
         <div class="topnav">
-          <a href="#home">Log In</a>
+          <LoginButton></LoginButton>
+          <LogoutButton></LogoutButton>
           <a href="#contact">Contact</a>
           <a href="#about">About</a>
         </div>
