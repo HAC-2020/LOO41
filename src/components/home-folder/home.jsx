@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import "./home.css"; 
+import "./home.css"; 
 import Button from 'react-bootstrap/Button';
 import Col from "react-bootstrap/Col";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -29,13 +29,12 @@ export default class Home extends Component {
           <Col className="home-text">
           <h5>We're here to help you grow your business during these tough times. I just wrote something random here and it will be changed.</h5>
           </Col>
-          <br></br>
         </div>
 
         <div>
          <Col>
           <a href='https://www.google.ca/' target="_blank" rel="noopener noreferrer">
-            <Button variant="primary">GET STARTED</Button>{' '}
+            <Button variant="primary" className="start-button">GET STARTED</Button>{' '}
           </a>
           </Col>
         </div>

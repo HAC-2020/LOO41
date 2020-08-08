@@ -4,8 +4,9 @@ div {
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #333;
+    background-color: rgb(69, 134, 240);
     overflow: hidden;
+    height: 28%;
   }
   
   /* Style the links inside the navigation bar */
@@ -28,4 +29,48 @@ div {
   .topnav a.active {
     background-color: #4CAF50;
     color: white;
+  }
+
+  body {
+    background-color: rgb(32, 38, 54);
+  }
+
+  .title {
+    font-size: 300%;
+    color: floralwhite;
+  }
+
+  .home-text {
+    color: floralwhite;
+    position: absolute;
+    right: 7%;
+    width: 40%;
+    padding: 2%;
+    text-align: center;
+  }
+
+  .start-button {
+    position: absolute;
+    float: right;
+
+  }
+
+  .about-title {
+    color: floralwhite;
+  }
+
+  .about1-text {
+    color: floralwhite;
+  }
+
+  .about-quote {
+    color: floralwhite;
+  }
+
+  .about2-text {
+    color: floralwhite;
+  }
+
+  .us-title {
+    color: floralwhite;
   }
