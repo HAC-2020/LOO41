@@ -1,2 +1,9 @@
+<<<<<<< HEAD
 node_modules
 node_modules
+=======
+node_modules/
+*.js.map
+.env
+.DS_Store
+>>>>>>> master
