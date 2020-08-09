@@ -1,6 +1,12 @@
 # LOO41 presents Valeo
 no business left behind.
 
+# PREVIEW 
+
+![demo photo](home.PNG)
+![demo photo](dashboard.PNG)
+![demo photo](chatbot.PNG)
+
 # PURPOSE
 
 In recent months, as the COVID-19 situation unfolds, we’ve seen a battle of the fittest within our economy; a chance to float or sink. Some businesses thrived, others fell behind, and many had to recede. So what’s the secret? How did the pandemic widen the gap between businesses large and small?
