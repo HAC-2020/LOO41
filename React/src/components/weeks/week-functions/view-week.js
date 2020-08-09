@@ -26,12 +26,15 @@ export default class ViewWeek extends Component {
     this.onChangeDate = this.onChangeDate.bind(this);
     //this.onSubmit = this.onSubmit.bind(this);
 
+
     this.state = {
         sales: 0,
         ecomm: 0,
         social: 0,
         ads: 0,
         other: 0,
+        conTip: "",
+        proTip: "",
         date: new Date()
         //users: []
       }
@@ -189,8 +192,21 @@ export default class ViewWeek extends Component {
 
   //}
 
-  render() {
+  //0-5
+  proTipCreate() {
+    var max = Math.max(this.ecomm, this.social, this.ads, this.other);
+    console.log(max);
+    
+    
+  }
 
+  conTipCreate() {
+    
+  }
+
+  render() {
+    this.proTipCreate();
+    this.conTipCreate();
 
     //const a = this.state.ecomm;
     const state = {
