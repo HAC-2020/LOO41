@@ -1,11 +1,11 @@
 # LOO41 presents Valeo
 no business left behind.
 
-# PREVIEW 
+# preview 
 
 ![demo photo](home.png)
 
-# PURPOSE
+# purpose
 
 In recent months, as the COVID-19 situation unfolds, we’ve seen a battle of the fittest within our economy; a chance to float or sink. Some businesses thrived, others fell behind, and many had to recede. So what’s the secret? How did the pandemic widen the gap between businesses large and small?
  
@@ -13,7 +13,7 @@ The answer is digitalization. Studies reveal that digitally mature companies are
 
 Valeo revolutionizes market growth through the quantification of actions we wouldn’t traditionally consider. A simplistic web-tool, we encourage small businesses to build their online presence to expand their market reach and accessibility.
 
-# BUSINESS SUSTAINABILITY 
+# business sustainability
 
 At Valeo, we strive for growth in all aspects: in our user base, our functionality, and our viability. 
 
@@ -23,7 +23,7 @@ Valeo is built for the users, and our structure reflects exactly that. A light-w
 
 The best part? Valeo never fades away: as the digital world grows, we only have more advice to give! As AI technologies improve and resources expand, Valeo can only grow. The path forward is endless, and we wish to guide you every step of the way.
 
-## FEATURES
+## features
 
 ![demo photo](dashboard.png)
 
@@ -35,14 +35,14 @@ The best part? Valeo never fades away: as the digital world grows, we only have 
 
 - CHATBOT: Valeo, your very own AI advisor, will give you tips and resources based on what you want to find. Our database expands to over 50 resources, with an in-depth analysis of the opportunities and fallbacks of each, guaranteeing you to find the best path for your business.
 
-## TECHNOLOGIES USED
+## technologies
 
 MERN (MongoDB, Express, React, Node) stack with CRUD, personalized Microsoft Azure chatbot, COVID-19 API, and chartJS
 
-## NEXT STEPS
+## next steps
 
 As this is a demo, we did not get to authenticating users and connecting it to our MongoDB database. However, next steps for Valeo include linking Auth0 with MongoDB and continuing to develop algorithms to personalize the user experience. We aim to host it on the cloud through Microsoft Azure to minimize maintenance so we can maximize time spent on the end user. 
 
-## COMING SOON
+## coming soon
 
 To be accessible at https://valeoweb.azurewebsites.net/
