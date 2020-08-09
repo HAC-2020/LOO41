@@ -1,0 +1,116 @@
+html{
+    height: auto;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.circle {
+    height: 150vh;
+    width: 170vh;
+    transform: translate(-40%, -50%);
+    background-color: rgb(16, 23, 58);
+    border-radius: 50%;
+    z-index: -3;
+  }
+
+  .circle2 {
+    height: 170vh;
+    width: 170vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-30%, -50%);
+    background-color: rgb(75, 192, 39);
+    border-radius: 50%;
+    z-index: -4;
+  }
+
+.title {
+    z-index: 10;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+
+.valeo {
+    height: 25vh;
+    
+}
+
+
+.slogan {
+    z-index: 10;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 25px;
+    margin-left: 10%;
+    margin-top: 5%;
+    color: white;
+}
+
+.start {
+    margin-left: 10%;
+}
+
+
+.spacer {
+    height: 50vh;
+}
+
+.mission, .goal {
+    text-align: right;
+    margin-right: 10%;
+    font-family: 'Work Sans', sans-serif;
+    color: rgb(16, 23, 58);
+}
+
+.mission {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.goal {
+    font-size: 35px;
+    margin-top: 0;
+}
+
+ul {
+    margin-left: 20%;
+    margin-right: 10%;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    color: rgb(16, 23, 58);
+}
+
+ul {
+
+    list-style-type: none;
+  
+  }
+  
+.digital {
+    color: rgb(31, 182, 31);
+}
+  
+
+ul li:before {
+
+    content: '';
+  
+    display: inline-block;
+  
+    height: 18px;
+  
+    width: 18px;
+  
+    background-size: 18px;
+  
+    background-image: url(green-checkmark.png);
+  
+    background-repeat: no-repeat;
+  
+    margin-right: 5px;
+  
+  }
