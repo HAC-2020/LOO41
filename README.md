@@ -4,8 +4,6 @@ no business left behind.
 # PREVIEW 
 
 ![demo photo](home.png)
-![demo photo2](dashboard.png)
-![demo photo3](chatbot.png)
 
 # PURPOSE
 
@@ -27,11 +25,15 @@ The best part? Valeo never fades away: as the digital world grows, we only have 
 
 ## FEATURES
 
+![demo photo](dashboard.png)
+
 - DATA LOGGER: You can easily log in data points: your net sales, as well as ranking your efforts in these digitalization categories: ecommerce, social media, online ads, and more. Your rankings are visualized, and advice is personally curated based off of your rankings.
 
-- CHATBOT: Valeo, your very own AI advisor, will give you tips and resources based on what you want to find. Our database expands to over 50 resources, with an in-depth analysis of the opportunities and fallbacks of each, guaranteeing you to find the best path for your business.
- 
 - COVID-19 TRACKER: With the current situation, your performance does not always accurately depict your success. We retrieve real-time COVID information based on your location to give you reminders that small steps backward don't mean you aren’t moving forwards.
+
+![demo photo](chatbot.png)
+
+- CHATBOT: Valeo, your very own AI advisor, will give you tips and resources based on what you want to find. Our database expands to over 50 resources, with an in-depth analysis of the opportunities and fallbacks of each, guaranteeing you to find the best path for your business.
 
 ## TECHNOLOGIES USED
 
@@ -40,3 +42,7 @@ MERN (MongoDB, Express, React, Node) stack with CRUD, personalized Microsoft Azu
 ## NEXT STEPS
 
 As this is a demo, we did not get to authenticating users and connecting it to our MongoDB database. However, next steps for Valeo include linking Auth0 with MongoDB and continuing to develop algorithms to personalize the user experience. We aim to host it on the cloud through Microsoft Azure to minimize maintenance so we can maximize time spent on the end user. 
+
+## COMING SOON
+
+To be accessible at https://valeoweb.azurewebsites.net/
