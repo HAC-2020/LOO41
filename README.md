@@ -43,6 +43,20 @@ MERN (MongoDB, Express, React, Node) stack with CRUD, personalized Microsoft Azu
 
 As this is a demo, we did not get to authenticating users and connecting it to our MongoDB database. However, next steps for Valeo include linking Auth0 with MongoDB and continuing to develop algorithms to personalize the user experience. We aim to host it on the cloud through Microsoft Azure to minimize maintenance so we can maximize time spent on the end user. 
 
+## to run on local server
+
+open up base folder
+### cd react 
+### npm start
+
+AND
+
+open up base folder 
+### cd backend
+### nodemon server
+
+the application will be running on localhost:3000.
+
 ## coming soon
 
 To be accessible at https://valeoweb.azurewebsites.net/
