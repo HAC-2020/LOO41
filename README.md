@@ -4,8 +4,8 @@ no business left behind.
 # PREVIEW 
 
 ![demo photo](home.PNG)
-![demo photo](dashboard.PNG)
-![demo photo](chatbot.PNG)
+![demo photo2](dashboard.PNG)
+![demo photo3](chatbot.PNG)
 
 # PURPOSE
 
