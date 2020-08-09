@@ -19,7 +19,7 @@ export default class EditUser extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/profile/:5f2f901449bdd3302576a00f')
+    axios.get('http://localhost:5000/profile/5f2f901449bdd3302576a00f')
       .then(response => {
         this.setState({
           business: response.data.business,
@@ -53,7 +53,7 @@ export default class EditUser extends Component {
 
     console.log(user);
 
-    axios.post('http://localhost:5000/profile/:5f2f901449bdd3302576a00f')
+    axios.post('http://localhost:5000/profile/5f2f901449bdd3302576a00f')
       .then(res => console.log(res.data));
 
     window.location = '/';

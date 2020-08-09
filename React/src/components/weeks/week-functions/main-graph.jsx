@@ -14,6 +14,7 @@ export default class MainGraph extends Component {
         //this.past = {};
         this.difference = 0;
         this.percent = 0;
+        this.country = "Canada";
     //this.deleteWeek = this.deleteWeek.bind(this)
 
     this.state = {weeks: [], current: {}, past: {}};
@@ -30,8 +31,8 @@ export default class MainGraph extends Component {
     fetch(API)
     .then(response => response.json())
     .then(data => {
-      this.setState({current: data["Argentina"][data["Argentina"].length - 1]}); 
-      this.setState({past: data["Argentina"][data["Argentina"].length - 8]}); 
+      this.setState({current: data[this.country][data[this.country].length - 1]}); 
+      this.setState({past: data[this.country][data[this.country].length - 8]}); 
       this.findChange();
     });
   }
@@ -84,12 +85,12 @@ export default class MainGraph extends Component {
     //console.log(this.sales);
     return (
       <div>
-        <h3>Welcome, </h3>
-        <h2>COMPANY: X</h2>
+        <h3>Welcome!</h3>
+        <h6>Create a new log to track your growth, and see it reflect on this graph!</h6>
         <Line data={data} />
-        <h5>Notice: COVID notice goes here</h5>
         {/* this is the number u can see it at the bottom of the page */}
-        <h4>{num} PERCENT</h4> 
+        <h4>YOUR LOCATION: {this.country}</h4>
+        <h4>Active cases change from last week: {num}%</h4> 
       </div>
     )
   }

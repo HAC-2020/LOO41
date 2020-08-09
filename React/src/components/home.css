@@ -95,7 +95,7 @@ ul {
 }
   
 
-ul li:before {
+.po:before {
 
     content: '';
   

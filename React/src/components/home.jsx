@@ -32,9 +32,9 @@ export default class Home extends Component {
                     Build your <b className="digital">digital</b> empire. </b>
                 </p>
                 <ul>
-                    <li>Track your business data and display growth patterns on a beautiful, organized interface</li>
-                    <li>Receive valuable, personalized tips to help grow your business based on performance trends</li>
-                    <li>Access our collection of resources and advice whenever you want through Valeo, our devoted chatbot!</li>
+                    <li className="po">Track your business data and display growth patterns on a beautiful, organized interface</li>
+                    <li className="po">Receive valuable, personalized tips to help grow your business based on performance trends</li>
+                    <li className="po">Access our collection of resources and advice whenever you want through Valeo, our devoted chatbot!</li>
                 </ul>
             </Col>
         </Row>
