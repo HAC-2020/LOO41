@@ -1,6 +1,5 @@
-# LOO41
-
-# Valeo: no business left behind. 
+# LOO41 presents Valeo
+no business left behind.
 
 # PURPOSE
 
@@ -12,7 +11,9 @@ Valeo revolutionizes market growth through the quantification of actions we woul
 
 # BUSINESS SUSTAINABILITY 
 
-At Valeo, we strive for growth in all aspects: in our user base, our functionality, and our viability. Our simplistic interface, minimal information capture, and versatile data usage allow for businesses of any stage and type to get involved. We ensure that no one is left behind: whether you’re a young entrepreneur creating a start-up, or in an established family business: our design allows any demographic to jump right in, anytime, anywhere.
+At Valeo, we strive for growth in all aspects: in our user base, our functionality, and our viability. 
+
+Our simplistic interface, minimal information capture, and versatile data usage allow for businesses of any stage and type to get involved. We ensure that no one is left behind: whether you’re a young entrepreneur creating a start-up, or in an established family business: our design allows any demographic to jump right in, anytime, anywhere.
  
 Valeo is built for the users, and our structure reflects exactly that. A light-weight front-end, built with React, paired with authentication and data retrieval through Firebase, ensures speed and security. The chatbot, created with Microsoft Azure and their artificial intelligence technologies, ensure a personalized experience. We’re looking forward to taking things a step forward by integrating auth0 user profiles and hosting on the cloud! 
 
