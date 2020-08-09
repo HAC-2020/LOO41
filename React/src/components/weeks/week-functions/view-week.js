@@ -172,11 +172,42 @@ export default class ViewWeek extends Component {
     var max = Math.max(this.ecomm, this.social, this.ads, this.other);
     console.log(max);
 
-    
+    var msg = "";
+
+    if(this.ecomm ==  max){
+      msg = "Try asking about ways to improve your E-Commerce store as this seems to be a strong sales channel!";
+    }
+    else if(this.social == max) {
+      msg = "Social media seems to be working! Ask for ways to fuel even more growth.";
+    }
+    else if(this.ads == max) {
+      msg = "WooHoo, online advertisments seem to be paying off. Ask about new ways to grow your digital marketing channel.";
+    }
+    else{
+      msg = "Your work is paying off. Ask about even more ways to grown your business!";
+    }
+    this.proTip = msg;
   }
 
   conTipCreate() {
-    
+    var min = Math.min(this.ecomm, this.social, this.ads, this.other);
+    console.log(min);
+
+    var msg = "";
+
+    if(this.ecomm ==  min){
+      msg = "We recommend to ask about potential E-Commerce tools that can help drive sales.";
+    }
+    else if(this.social == min) {
+      msg = "Perhaps try asking about ways to improve your social media presence to attract new customers to your business.";
+    }
+    else if(this.ads == min) {
+      msg = "Online advertisments did not seem to go well. Maybe its a matter of investing a little more to attract new customers. We recommend you talk about this!";
+    }
+    else{
+      msg = "Feel free to ask us about new ways to grow your business.";
+    }
+    this.proTip = msg;
   }
 
   render() {
