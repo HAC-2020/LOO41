@@ -54,7 +54,7 @@ export default class WeeksList extends Component {
   render() {
     return (
       <div>
-        <h3>Logged Weeks</h3>
+        <h3>{this.props.uid}</h3>
         <h5>To view your digitalization progress in more detail, click the view tab.</h5>
         <table className="table">
           <thead className="thead-light">

@@ -40,7 +40,8 @@ div {
     height: 220%;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to bottom, rgb(32, 38, 54), rgb(11, 16, 27));
+    /* background-image: linear-gradient(to bottom, rgb(32, 38, 54), rgb(11, 16, 27)); */
+    background-color: #fff;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: fill;

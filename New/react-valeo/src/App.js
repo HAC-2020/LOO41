@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
+import logo from './logo.svg';
 import './App.css';
-import Week from "./components/weeks/week";
-import Home from "./components/home-folder/home.jsx";
-import About1 from "./components/home-folder/about1.jsx";
-import About2 from "./components/home-folder/about2.jsx";
-import Us from "./components/home-folder/us.jsx";
 import withFirebaseAuth from 'react-with-firebase-auth'
 import * as firebase from 'firebase';
 import 'firebase/auth';
@@ -15,14 +11,14 @@ const firebaseAppAuth = firebaseApp.auth();
 const providers = {
   googleProvider: new firebase.auth.GoogleAuthProvider(),
 };
-// var uid = "";
 
 class App extends Component {
   
   constructor(){
     super();
     this.state = {
-      uid: null
+      speed: null,
+      user: null
     };
   }
 
@@ -35,9 +31,9 @@ class App extends Component {
             console.log(doc.id, " => ", doc.data().sales);
             var age = doc.data().sales;
             console.log(age);
-            // this.setState({
-            //   uid: doc.data().sales
-            // });
+            this.setState({
+              speed: doc.data().sales
+            });
         });
     })
     .catch(function(error) {
@@ -53,22 +49,20 @@ class App extends Component {
     } = this.props;
 
     if(user) {
-      this.uid = user.uid;
-      // this.props.uid = user.uid;
-      console.log("logged in" + this.uid);
+      console.log("logged in");
     }
 
     return (
       // <div className="App">
       //   <h1>{this.state.speed}</h1>
         
-      
+      // </div>
       <div className="App">
         <header className="App-header">
-          
+          <img src={logo} className="App-logo" alt="logo" />
           {
             user 
-              ? <p>Hello, {user.displayName}</p>
+              ? <p>Hello, {user.uid}</p>
               : <p>Please sign in.</p>
           }
           {
@@ -77,39 +71,33 @@ class App extends Component {
               : <button onClick={signInWithGoogle}>Sign in with Google</button>
           }
         </header>
-        <Home></Home>
-        <About1></About1>
-        <About2></About2>
-        <Us></Us>
-        <Week uid={this.uid}></Week>
       </div>
-      
       
     );
   }
 
 }
 
-// function App() {
-//   const {
-//     user,
-//     signOut,
-//     signInWithGoogle,
-//   } = this.props;
-
-//   if(user) {
-//     console.log("logged in");
-//   }
-//   return (
-//     <div className="App">
-//       <Home></Home>
-//       <About1></About1>
-//       <About2></About2>
-//       <Us></Us>
-//       <Week></Week>
-//     </div>
-//   );
-// }
+/*function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}*/
 
 // export default App;
 export default withFirebaseAuth({
