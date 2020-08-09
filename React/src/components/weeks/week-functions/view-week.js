@@ -7,7 +7,6 @@ import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import {Doughnut} from 'react-chartjs-2';
-import * as firebase from 'firebase';
 // NOTE: have to do npm install --save chart.js 
 
 
@@ -41,41 +40,17 @@ export default class ViewWeek extends Component {
   }
 
   componentDidMount() {
-    var db = firebase.firestore();
-    db.collection("users").get()
-    .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
-            // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data().name);
-            var age = doc.data().age;
-            console.log(age);
-            this.setState({
-              // username: response.data.username,
-              sales: doc.data().sales,
-              ecomm: doc.data().ecomm,
-              social: doc.data().social,
-              ads: doc.data().ads,
-              other: doc.data().other,
-              date: new Date(doc.data().date)
-            });
-        });
-    })
-    .catch(function(error) {
-        console.log("Error getting documents: ", error);
-    });
-    
-
-    // axios.get('http://localhost:5000/users/')
-    //   .then(response => {
-    //     if (response.data.length > 0) {
-    //       this.setState({
-    //         users: response.data.map(user => user.username),
-    //       })
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   })
+    axios.get('http://localhost:5000/users/')
+      .then(response => {
+        if (response.data.length > 0) {
+          this.setState({
+            users: response.data.map(user => user.username),
+          })
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      })
 
   }
 
@@ -196,7 +171,7 @@ export default class ViewWeek extends Component {
   proTipCreate() {
     var max = Math.max(this.ecomm, this.social, this.ads, this.other);
     console.log(max);
-    
+
     
   }
 
