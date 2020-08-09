@@ -25,7 +25,6 @@ export default class ViewWeek extends Component {
     this.onChangeDate = this.onChangeDate.bind(this);
     //this.onSubmit = this.onSubmit.bind(this);
 
-
     this.state = {
         sales: 0,
         ecomm: 0,
@@ -40,17 +39,33 @@ export default class ViewWeek extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/users/')
+    axios.get('http://localhost:5000/weeks/'+this.props.match.params.id)
       .then(response => {
-        if (response.data.length > 0) {
-          this.setState({
-            users: response.data.map(user => user.username),
-          })
-        }
+        this.setState({
+          // username: response.data.username,
+          sales: response.data.sales,
+          ecomm: response.data.ecomm,
+          social: response.data.social,
+          ads: response.data.ads,
+          other: response.data.other,
+          date: new Date(response.data.date)
+        })   
       })
-      .catch((error) => {
+      .catch(function (error) {
         console.log(error);
       })
+
+    // axios.get('http://localhost:5000/users/')
+    //   .then(response => {
+    //     if (response.data.length > 0) {
+    //       this.setState({
+    //         users: response.data.map(user => user.username),
+    //       })
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   })
 
   }
 
@@ -136,7 +151,7 @@ export default class ViewWeek extends Component {
     //     }
     //   ]
     // }
-    
+
     // axios.get('http://localhost:5000/weeks/'+this.props.match.params.id)
     //   .then(response => {
     //     this.setState({
@@ -162,22 +177,54 @@ export default class ViewWeek extends Component {
       //   ]
       // }  
 
-    
+
 
 
   //}
 
-  //0-5
   proTipCreate() {
-    var max = Math.max(this.ecomm, this.social, this.ads, this.other);
+    var max = Math.max(this.state.ecomm, this.state.social, this.state.ads, this.state.other);
     console.log(max);
 
-    
+    var msg = "";
+
+    if(this.state.ecomm ==  max){
+      msg = "Try asking about ways to improve your E-Commerce store as this seems to be a strong sales channel!";
+    }
+    else if(this.state.social == max) {
+      msg = "Social media seems to be working! Ask for ways to fuel even more growth.";
+    }
+    else if(this.state.ads == max) {
+      msg = "WooHoo, online advertisments seem to be paying off. Ask about new ways to grow your digital marketing channel.";
+    }
+    else{
+      msg = "Your work is paying off. Ask about even more ways to grown your business!";
+    }
+    this.state.proTip = msg;
   }
 
   conTipCreate() {
-    
+    var min = Math.min(this.state.ecomm, this.state.social, this.state.ads, this.state.other);
+    console.log(min);
+
+    var msg = "";
+
+    if(this.state.ecomm ==  min){
+      msg = "We recommend to ask about potential E-Commerce tools that can help drive sales.";
+    }
+    else if(this.state.social == min) {
+      msg = "Perhaps try asking about ways to improve your social media presence to attract new customers to your business.";
+    }
+    else if(this.state.ads == min) {
+      msg = "Online advertisments did not seem to go well. Maybe its a matter of investing a little more to attract new customers. We recommend you talk about this!";
+    }
+    else{
+      msg = "Feel free to ask us about new ways to grow your business.";
+    }
+    this.state.conTip = msg;
   }
+
+
 
   render() {
     this.proTipCreate();
@@ -224,7 +271,6 @@ export default class ViewWeek extends Component {
             }
           }}
         /> */}
-        <p>{ this.state.sales }</p>
         {/* <p>{a}</p> */}
         <Doughnut
           data={state}
@@ -240,7 +286,10 @@ export default class ViewWeek extends Component {
             }
           }}
         />
+        <div className="week-space"></div>
+        <p>{this.state.proTip}</p>
+        <p>{this.state.conTip}</p>
       </div>
     )
   }
-}
+} 

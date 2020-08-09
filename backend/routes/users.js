@@ -8,7 +8,7 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/profile/:5f2f901449bdd3302576a00f').post((req, res) => {
-  User.findById(req.params.id)
+  User.findById('5f2f901449bdd3302576a00f')
     .then(user => {
       user.business = String(req.body.business);
       user.type = Number(req.body.type);

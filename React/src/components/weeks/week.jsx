@@ -9,6 +9,7 @@ import CreateWeek from "./week-functions/create-week";
 import ViewWeek from "./week-functions/view-week";
 import MainGraph from "./week-functions/main-graph";
 import EditUser from "./week-functions/edit-user";
+import "./dash.css";
 
 function Week() {
   return (
@@ -23,6 +24,7 @@ function Week() {
       <Route path="/list" component={WeeksList} />
       <Route path="/profile" component={EditUser} />
       {/* <Route path="/user" component={CreateUser} /> */}
+      <div className="dash-space"></div>
       </div>        
     </Router>
   );
