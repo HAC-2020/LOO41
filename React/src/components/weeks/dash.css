@@ -1,6 +1,10 @@
 .dash-space {
-    height: 200px;
+    height: 400px;
 }
 .week-space {
     height: 50px;
+}
+
+#bot {
+    width: 20%;
 }
